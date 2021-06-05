@@ -71,7 +71,7 @@ public class CategoriaResource {
 		return ResponseEntity.noContent().build();
 	}
 	
-	@RequestMapping(value="/paginado", method=RequestMethod.DELETE)
+	@RequestMapping(value="/paginado", method=RequestMethod.GET)
 	public ResponseEntity<Page<CategoriaDTO>> listarPaginado(
 			@RequestParam(value="pagina", defaultValue="0") Integer pagina,
 			@RequestParam(value="quantidade", defaultValue="24") Integer quantidade,
