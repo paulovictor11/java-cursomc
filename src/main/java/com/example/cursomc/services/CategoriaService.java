@@ -26,5 +26,10 @@ public class CategoriaService {
 			"Objeto não encontrado! ID: " + id + ", Tipo: " + Categoria.class.getName()
 		));
 	}
+	
+	public Categoria atualizar(Categoria obj) {
+		buscar(obj.getId());
+		return repo.save(obj);
+	}
 
 }
