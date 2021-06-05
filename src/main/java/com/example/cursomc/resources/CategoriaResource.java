@@ -46,4 +46,11 @@ public class CategoriaResource {
 		 
 		 return ResponseEntity.noContent().build();
 	}
+	
+	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
+	public ResponseEntity<Categoria> apagar(@PathVariable Integer id) {
+		service.apagar(id);
+		
+		return ResponseEntity.noContent().build();
+	}
 }
